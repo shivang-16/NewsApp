@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Navbar from './components/Navbar';
+import News from './components/News';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      mode: "light"
+    }
+  }
+
+  toggleMode=()=>{
+    const newMode = this.state.mode === 'light' ? 'dark' : 'light';
+
+      this.setState({
+        mode: newMode
+      })
+      document.body.style.backgroundColor = newMode === 'dark' ? 'black' : 'white';
+  
+  }
+
+  render() {
+    return (
+      <>
+      <Navbar mode={this.state.mode} toggleMode={this.toggleMode}/>
+      <News pageSize={6} category="Business" country="in" apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f" mode={this.state.mode}/>
+      </>
+    );
+  }
 }
-
-export default App;
