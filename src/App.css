@@ -1,23 +1,28 @@
-
-
 ::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff; 
+  background: #ffffff;
   border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e6e6e6; 
-  border-radius: 5px;
+  background: #e6e6e6;
+  border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b7b7b7; 
+  background: #b7b7b7;
 }
 ::-webkit-scrollbar-corner {
-   background: #ffffff; 
+  background: #ffffff;
+}
 
+.dark-mode {
+  transition: transform 0.2s ease-in-out !important;
+}
+.dark-mode:hover {
+  transform: rotateX("20deg") !important;
+  cursor: pointer !important;
 }
