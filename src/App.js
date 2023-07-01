@@ -28,7 +28,7 @@ export default class App extends Component {
       <Navbar mode={this.state.mode} toggleMode={this.toggleMode} />
   
      <Routes>
-       <Route exact path='/general' element= {<News
+       <Route exact path='/' element= {<News
           key="general"
           pageSize={9}
           category="General"
