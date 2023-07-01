@@ -26,14 +26,14 @@ export default class App extends Component {
       <>
       <BrowserRouter>
       <Navbar mode={this.state.mode} toggleMode={this.toggleMode} />
-
+  
      <Routes>
        <Route exact path='/general' element= {<News
           key="general"
           pageSize={9}
           category="General"
           country="in"
-          apiKey="9127f9b673704da6a6dc08c01ac3d2e9"
+          apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f"
           mode={this.state.mode}
         />}/> 
        <Route exact path='/sports' element= {<News
@@ -41,7 +41,7 @@ export default class App extends Component {
           pageSize={9}
           category="Sports"
           country="in"
-          apiKey="9127f9b673704da6a6dc08c01ac3d2e9"
+          apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f"
           mode={this.state.mode}
         />}/> 
        <Route exact path='/business' element= {<News
@@ -49,7 +49,7 @@ export default class App extends Component {
           pageSize={9}
           category="Business"
           country="in"
-          apiKey="9127f9b673704da6a6dc08c01ac3d2e9"
+          apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f"
           mode={this.state.mode}
         />}/> 
        <Route exact path='/entertainment' element= {<News
@@ -57,7 +57,7 @@ export default class App extends Component {
           pageSize={9}
           category="Entertainment"
           country="in"
-          apiKey="9127f9b673704da6a6dc08c01ac3d2e9"
+          apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f"
           mode={this.state.mode}
         />}/> 
        <Route exact path='/health' element= {<News
@@ -65,7 +65,7 @@ export default class App extends Component {
           pageSize={9}
           category="Health"
           country="in"
-          apiKey="9127f9b673704da6a6dc08c01ac3d2e9"
+          apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f"
           mode={this.state.mode}
         />}/> 
        <Route exact path='/science' element= {<News
@@ -73,7 +73,7 @@ export default class App extends Component {
           pageSize={9}
           category="Science"
           country="in"
-          apiKey="9127f9b673704da6a6dc08c01ac3d2e9"
+          apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f"
           mode={this.state.mode}
         />}/> 
        <Route exact path='/technology' element= {<News
@@ -81,7 +81,7 @@ export default class App extends Component {
           pageSize={9}
           category="Technology"
           country="in"
-          apiKey="9127f9b673704da6a6dc08c01ac3d2e9"
+          apiKey="590382b4be7c49d8bd6c3d4f60ddbe1f"
           mode={this.state.mode}
         />}/> 
         </Routes>
