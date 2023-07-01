@@ -28,7 +28,7 @@ export default class App extends Component {
   }
   //variables
    pageSize = 8;
-   apiKey ="590382b4be7c49d8bd6c3d4f60ddbe1f";
+   apiKey = process.env.REACT_APP_NEWS_API;
 
   render() {
     return (
@@ -39,7 +39,6 @@ export default class App extends Component {
       <LoadingBar
         color='#f11946'
         progress={this.state.progress}
-        // onLoaderFinished={() => setProgress(0)}
       />
      <Routes>
        <Route exact path='/' element= {<News setProgress= {this.setProgress}
