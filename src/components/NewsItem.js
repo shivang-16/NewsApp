@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, imgUrl, newsUrl, date, author } = this.props;
+    let { title, description, imgUrl, newsUrl, date, author, source } =
+      this.props;
     return (
       <>
         <div className="container">
@@ -12,6 +13,13 @@ export default class NewsItem extends Component {
                 this.props.mode === "dark" ? "dark" : "light"
               } text-${this.props.mode === "dark" ? "light" : "dark"}`}
             >
+              <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{
+                zIndex: '1',
+                left: '92%',
+                padding:"8px"
+              }}>
+               {source}
+              </span>
               <img
                 src={
                   imgUrl
@@ -24,11 +32,18 @@ export default class NewsItem extends Component {
               <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">
-                  {date}{" "}
-                  <strong style={{ position: "absolute", right: "20px" }}>
-                    -{author}
-                  </strong>
+                  <small
+                    className={`text-body-${
+                      this.props.mode === "dark" ? "light" : "secondary"
+                    }`}
+                  >
+                    {new Date(date).toDateString()}{" "}
+                    <strong style={{ position: "absolute", right: "20px" }}>
+                      -{author}
+                    </strong>
+                  </small>
                 </p>
+
                 <p className="card-text">{description}</p>
                 <a
                   href={newsUrl}

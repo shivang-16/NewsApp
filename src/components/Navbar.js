@@ -10,7 +10,7 @@ export default class Navbar extends Component {
       <>
         <nav
           className={`navbar navbar-expand-lg navbar-${this.props.mode} bg-${this.props.mode}`}
-          style={{ position: "sticky", top: "0", zIndex: "1" }}
+          style={{ position: "sticky", top: "0", zIndex: "2" }}
         >
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
@@ -122,18 +122,15 @@ export default class Navbar extends Component {
                   className="form-check-input"
                   type="checkbox"
                   role="switch"
-                  id="flexSwitchCheckDefault"
-                  onClick={this.props.toggleMode}
-                />
+                  id="flexSwitchCheckDefault" onClick={this.props.toggleMode}/>
                 <label
                   className="form-check-label"
                   htmlFor="flexSwitchCheckDefault"
                 >
-                  {this.props.mode === "dark"
-                    ? "Dark Mode ON"
-                    : "Light Mode ON"}
+                  {this.props.mode==='dark'?'Dark Mode ON':'Light Mode ON'}
                 </label>
               </div>
+            
             </div>
           </div>
         </nav>
