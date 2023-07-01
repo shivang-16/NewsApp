@@ -68,9 +68,7 @@ export default class News extends Component {
               this.props.mode === "dark" ? "light" : "dark"
             }`}
           >
-            {this.props.category
-              ? `${this.props.category} News`
-              : "NewsSphere-Trending"}
+            {this.props.category==='General'?'NewsSphere-Top Headlines': `${this.props.category} News`}
           </h1>
 
           <div className="row">
