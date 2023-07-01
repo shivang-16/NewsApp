@@ -42,8 +42,9 @@ export default class News extends Component {
 
     document.title =
       this.props.category === "General"
-        ? document.title
+        ? ' NewsSphere - Latest News, Breaking Stories, and In-Depth Analysis'
         : `NewsSphere - ${this.props.category}`;
+  }
   }
 
   fetchMoreData = async () => {
