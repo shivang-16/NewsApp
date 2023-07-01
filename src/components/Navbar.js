@@ -14,7 +14,7 @@ export default class Navbar extends Component {
           style={{ position: "sticky", top: "0", zIndex: "2" }}
         >
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/general">
+            <Link className="navbar-brand" to="/">
               <img
                 src="https://thumbnails.yayimages.com/1600/b/3ac/b3ac7fe.jpg"
                 alt=""
@@ -23,7 +23,7 @@ export default class Navbar extends Component {
                 style={{ borderRadius: "10px" }}
               />
             </Link>
-            <Link className="navbar-brand" to="/general">
+            <Link className="navbar-brand" to="/">
               NewsSphere
             </Link>
             <button
@@ -43,7 +43,7 @@ export default class Navbar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" to="/general">
+                  <Link className="nav-link" aria-current="page" to="/">
                     Home
                   </Link>
                 </li>
