@@ -28,7 +28,7 @@ export default class App extends Component {
   }
   //variables
    pageSize = 8;
-   apiKey = process.env.REACT_APP_NEWS_API;
+   apiKey = "52e51654492f4a8b973f8e547626a733";
 
   render() {
     return (
